@@ -5,6 +5,7 @@ import com.braindata.rocketmq.Producer;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,11 +21,14 @@ public class PayController {
     @Autowired
     private Producer producer;
 
+    @Value("${spring.profiles.active}")
+    String active;
+
     @GetMapping(value = "/toPay")
     public String pay(){
         log.info("hello world");
         int a = stuRpcService.add(5,1);
-        return "success!" + a;
+        return "success!" + a + active;
     }
 
     @GetMapping(value = "/sendMessage")
