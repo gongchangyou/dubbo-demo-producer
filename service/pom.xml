@@ -16,6 +16,13 @@
     </properties>
     <dependencies>
         <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.22</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
             <groupId>com.braindata</groupId>
             <artifactId>dubbo-demo-contract</artifactId>
             <version>0.0.1-SNAPSHOT</version>
