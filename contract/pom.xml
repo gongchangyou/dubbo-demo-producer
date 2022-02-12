@@ -22,13 +22,13 @@
         <repository>
             <id>nexus-releases</id>
             <url>
-                http://10.10.48.192:8081/nexus/repository/maven-releases/
+                http://maven.cebsit.ac.cn/repository/maven-releases/
             </url>
         </repository>
         <snapshotRepository>
             <id>nexus-snapshots</id>
             <url>
-                http://10.10.48.192:8081/nexus/repository/maven-snapshots/
+                http://maven.cebsit.ac.cn/repository/maven-snapshots/
             </url>
         </snapshotRepository>
     </distributionManagement>
