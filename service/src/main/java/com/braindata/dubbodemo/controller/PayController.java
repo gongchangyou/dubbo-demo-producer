@@ -44,6 +44,13 @@ public class PayController {
         return producer.sendMsg(msg)? "true":"false";
     }
 
+    @GetMapping(value = "/sendDelayMessage")
+    public String sendDelayMessage(
+            @RequestParam("msg") String msg
+    ){
+        return producer.sendMsgDelayViaRocketMQ(msg)? "true":"false";
+    }
+
     /**
      * 执行shell命令
      */
