@@ -11,3 +11,4 @@
 *.iml
 *.versionsBackup
 log/*
+service/LOGS_DIR_IS_UNDEFINED/*
